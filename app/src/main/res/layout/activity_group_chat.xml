@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/LightGrey"
+    tools:context=".GroupChatActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecylearView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="@+id/linear"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_et_message"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Enter your  Message" />
+
+        <ImageView
+            android:id="@+id/send"
+            app:tint="@color/colorPrimary"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+
+            android:background="@drawable/round_shape"
+            android:src="@drawable/ic_send_svgrepo_com" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/userName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginRight="56dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <ImageView
+                android:id="@+id/profile_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight="50dp"
+                app:layout_constraintStart_toEndOf="@+id/backArrow"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintVertical_bias="1.0"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/avatar" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_burger_checklist_list_menu_navigation_svgrepo_com"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="349dp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_video_call_svgrepo_com" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintHorizontal_bias="0.719"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginRight="56dp"
+                android:padding="10dp"
+
+                android:src="@drawable/ic_phone_call_svgrepo_com" />
+
+            <ImageView
+                android:id="@+id/backArrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_left_arrow_arrows_svgrepo_com" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+</RelativeLayout>
+
